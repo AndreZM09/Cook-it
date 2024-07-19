@@ -1,0 +1,135 @@
+<resources>
+    <string name="app_name">App Compra y Venta</string>
+
+    <string name="default_web_client_id">387056184306-0l821na4h4fgbsrft78hu3dgat1m5tsh.apps.googleusercontent.com</string>
+
+    <string name="Item_Inicio">Inicio</string>
+    <string name="Item_Chats">Chats</string>
+    <string name="Item_Vender">Vender</string>
+    <string name="Item_Mis_Anuncions">Anuncios</string>
+    <string name="Item_Cuenta">Cuenta</string>
+    <string name="Tv_login">Iniciar sesión</string>
+    <string name="Tv_registro">Registrarme</string>
+    <string name="Tv_slash">|</string>
+
+    <string name="TituloR1">Titulo</string>
+
+    <string name="Ingresar_email">Ingresar con email</string>
+    <string name="Ingresar_google">Ingresar con google</string>
+
+    <string name="Txt_login">Login de usuario</string>
+    <string name="Et_email">Email</string>
+    <string name="Et_password">Password</string>
+    <string name="Btn_ingresar">Ingresar</string>
+    <string name="Txt_no_cuenta">¿No tienes una cuenta?</string>
+    <string name="Txt_registrarme">REGISTRARME</string>
+
+    <string name="Txt_registro">Registro de usuario</string>
+    <string name="Et_r_passwrod">Repetir contraseña</string>
+    <string name="Btn_registrar">Registrar</string>
+
+    <!--Perfil de usuario-->
+    <string name="Txt_perfil">Perfil de usuario</string>
+    <string name="Txt_informacion">Información: </string>
+    <string name="Txt_nombres">Nombres: </string>
+    <string name="Tv_nombres">Nombres completos</string>
+    <string name="Txt_email">Email: </string>
+    <string name="Tv_email">email@dominio.com</string>
+    <string name="Txt_nacimiento">Fecha de necimiento: </string>
+    <string name="Tv_nacimiento">dd/mm/aaaa</string>
+    <string name="Txt_miembro">Miembro desde</string>
+    <string name="Tv_miembro">dd/mm/aaaa</string>
+    <string name="Txt_telefono">Teléfono</string>
+    <string name="Tv_telefono">999999999</string>
+    <string name="Txt_estado_cuenta">Estado de cuenta: </string>
+    <string name="Tv_estado_cuenta">No verificado</string>
+
+    <string name="Txt_opciones">Opciones</string>
+    <string name="Btn_editar_perfil">Editar perfil</string>
+    <string name="Btn_verificar_cuenta">Verificar cuenta</string>
+    <string name="Btn_cerrar_sesion">Cerrar sesión</string>
+
+
+    <!--Editar perfil-->
+    <string name="Txt_editar_perfil">Editar perfil</string>
+    <string name="Et_nombres">Nombres completos</string>
+    <string name="Et_fecha_nacimiento">Fecha de nacimiento</string>
+    <string name="Cod_telefono"> +00 </string>
+    <string name="Et_telefono">Telefono</string>
+    <string name="Btn_actualizar">Actualizar</string>
+
+    <!--Crear anuncio-->
+    <string name="ET_receta">Nombre de la receta</string>
+    <string name="Categoria">Categoria</string>
+    <string name="Condicion">Condicion</string>
+    <string name="Et_calorias">Total de calorías</string>
+    <string name="Et_titulo">Título</string>
+    <string name="Et_descripcion">Descripción</string>
+    <string name="Et_ingredientes">Ingredientes</string>
+    <string name="Et_pasos">Pasos para la creación de la receta</string>
+    <string name="Btn_crear_anuncio">Crear anuncio</string>
+
+    <!--FGragmento Inicio-->
+    <string name="Tv_locacion">Elija una locacion</string>
+    <string name="Et_buscar">Buscar</string>
+    <string name="Txt_categorias">Categorías</string>
+    <string name="Tv_categoria">Categoría</string>
+
+    <!--Item anuncio-->
+    <string name="Tv_titulo">Nombre del producto</string>
+    <string name="Tv_descripcion">Descripción del producto, se podra visualizar un máximo de 3 lineas</string>
+    <string name="Tv_direccion">Dirección</string>
+    <string name="Tv_condicion">Nuevo</string>
+    <string name="Tv_simbolo_precio">$</string>
+    <string name="Tv_valoracion">Valoración</string>
+    <string name="Tv_fecha">dd/mm/yyyy</string>
+
+    <string name="Txt_detalle_info">Detalle de la receta</string>
+    <string name="Tv_cat">Categoría del anuncio</string>
+    <string name="Txt_nombre">Título</string>
+    <string name="Txt_descripcion">Descripción</string>
+    <string name="Txt_vistas">Número de visitas del anuncio</string>
+    <string name="Tv_vistas">0</string>
+    <string name="Tv_descr">Descipción del anuncio</string>
+    <string name="Txt_descipcion_del_vendedor">Autor</string>
+    <string name="Txt_ingredientes">Ingredientes</string>
+    <string name="Tv_ingredientes">Ingredientes de la receta</string>
+    <string name="Txt_pasos">Pasos</string>
+    <string name="Tv_pasos">Pasos para cocinar receta</string>
+    <string name="Txt_calorias">Calorías</string>
+    <string name="Tv_calorias">Numero de calorías de la receta</string>
+
+    <string name="imagenContadorTv">1/4</string>
+
+    <!--Cuadro de dialogo eliminar imagen-->
+    <string name="Txt_eliminar">¿Estas seguro(a) de eliminar la imagen?</string>
+    <string name="Btn_si">Si</string>
+    <string name="Btn_no">Cancelar</string>
+
+    <string name="txt_comentarios">Comentarios y  valoraciones</string>
+    <string name="Txt_agregar">Agregar un comentario</string>
+
+    <string name="Et_agregar_comentario">Escriba un comentario</string>
+    <string name="Btn_comentar">Comentar</string>
+
+    <string name="Tv_nombres_comentarios">Nombres</string>
+    <string name="Tv_fecha_comentario">dd/MM/yyyy</string>
+    <string name="Tv_comentario">Comentario del usuario</string>
+
+    <string name="Txt_olvide_pass">He olvidado mi contraseña</string>
+    <string name="Tv_recuperar">Recuperar</string>
+    <string name="Txt_olvide_password">Olvidé mi contraseña</string>
+
+    <string name="Txt_instrucicones">¿Olvidó su contraseña? Ingrese su correo electrónico registrado.
+    Le enviaremos las instrucciones de recuperación</string>
+    <string name="Btn_enviar_instrucciones">Enviar</string>
+
+    <string name="Txt_valoraciones">Calificar receta</string>
+    <string name="Txt_num_reseñas">Numero de reseñas</string>
+
+    <string name="Txt_loguearse_registrarse">Necesitas una cuenta para realizar esta acción</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+
+</resources>

@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "387056184306",
+    "firebase_url": "https://app-compra-y-venta-880ca-default-rtdb.firebaseio.com",
+    "project_id": "app-compra-y-venta-880ca",
+    "storage_bucket": "app-compra-y-venta-880ca.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:387056184306:android:89165714a6c44eb320596b",
+        "android_client_info": {
+          "package_name": "com.andre.appcomprayventa"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "387056184306-hoanaudjnjpu4ksdj5mgtl0h8in6ge83.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.andre.appcomprayventa",
+            "certificate_hash": "ceb14a70f48d222153eab14516b140087be7d3c5"
+          }
+        },
+        {
+          "client_id": "387056184306-0l821na4h4fgbsrft78hu3dgat1m5tsh.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDBoEL0mJLqvRpn0mbDX5kpvyPqzdB83NA"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "387056184306-0l821na4h4fgbsrft78hu3dgat1m5tsh.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

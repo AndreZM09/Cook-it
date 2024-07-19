@@ -1,0 +1,187 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".anuncios.CrearAnuncio">
+
+    <RelativeLayout
+        android:id="@+id/RL_Imagen"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:id="@+id/agregarImagen"
+            android:layout_marginTop="15dp"
+            android:layout_centerInParent="true"
+            android:src="@drawable/agregar_img"
+            android:layout_width="100dp"
+            android:layout_height="100dp"/>
+
+    </RelativeLayout>
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_below="@+id/RL_Imagen"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="10dp">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/RV_Imagenes"
+                app:layoutManager="androidx.recyclerview.widget.GridLayoutManager"
+                tools:listitem="@layout/item_imagenes_seleccionadas"
+                app:spanCount="4"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+
+            <!--Marca del producto-->
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/TIL_Marca"
+                android:layout_below="@+id/RV_Imagenes"
+                android:layout_marginTop="10dp"
+                app:boxCornerRadiusTopEnd="8dp"
+                app:boxCornerRadiusBottomStart="8dp"
+                app:boxCornerRadiusBottomEnd="8dp"
+                app:boxCornerRadiusTopStart="8dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <EditText
+                    android:id="@+id/Et_nombre"
+                    android:hint="@string/ET_receta"
+                    android:inputType="textPersonName|textCapSentences"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"/>
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <!--Categoría-->
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/TIL_Categoria"
+                android:layout_below="@+id/TIL_Marca"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
+                android:layout_marginTop="10dp"
+                app:boxCornerRadiusTopEnd="8dp"
+                app:boxCornerRadiusBottomStart="8dp"
+                app:boxCornerRadiusBottomEnd="8dp"
+                app:boxCornerRadiusTopStart="8dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <AutoCompleteTextView
+                    android:id="@+id/Categoria"
+                    android:hint="@string/Categoria"
+                    android:inputType="none"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"/>
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <!--Calrorías-->
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/TIL_calorias"
+                android:layout_below="@+id/TIL_Categoria"
+                android:layout_marginTop="10dp"
+                app:boxCornerRadiusTopEnd="8dp"
+                app:boxCornerRadiusBottomStart="8dp"
+                app:boxCornerRadiusBottomEnd="8dp"
+                app:boxCornerRadiusTopStart="8dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <EditText
+                    android:id="@+id/Et_calorias"
+                    android:hint="@string/Et_calorias"
+                    android:inputType="number"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"/>
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <!--Descripcion de la receta-->
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/TIL_descripcion"
+                android:layout_below="@+id/TIL_calorias"
+                android:layout_marginTop="10dp"
+                app:boxCornerRadiusTopEnd="8dp"
+                app:boxCornerRadiusBottomStart="8dp"
+                app:boxCornerRadiusBottomEnd="8dp"
+                app:boxCornerRadiusTopStart="8dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <EditText
+                    android:id="@+id/Et_descripcion"
+                    android:hint="@string/Et_descripcion"
+                    android:inputType="textPersonName|textCapSentences"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"/>
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <!--Ingredientes-->
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/TIL_ingredientes"
+                android:layout_below="@+id/TIL_descripcion"
+                android:layout_marginTop="10dp"
+                app:boxCornerRadiusTopEnd="8dp"
+                app:boxCornerRadiusBottomStart="8dp"
+                app:boxCornerRadiusBottomEnd="8dp"
+                app:boxCornerRadiusTopStart="8dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <EditText
+                    android:id="@+id/Et_ingredientes"
+                    android:hint="@string/Et_ingredientes"
+                    android:minHeight="100dp"
+                    android:inputType="textMultiLine|textCapSentences"
+                    android:gravity="top|start"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"/>
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <!--Pasos para realizar receta-->
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/TIL_pasos"
+                android:layout_below="@+id/TIL_ingredientes"
+                android:layout_marginTop="10dp"
+                app:boxCornerRadiusTopEnd="8dp"
+                app:boxCornerRadiusBottomStart="8dp"
+                app:boxCornerRadiusBottomEnd="8dp"
+                app:boxCornerRadiusTopStart="8dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <EditText
+                    android:id="@+id/Et_pasos"
+                    android:hint="@string/Et_pasos"
+                    android:minHeight="100dp"
+                    android:inputType="textMultiLine|textCapSentences"
+                    android:gravity="top|start"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"/>
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+        </RelativeLayout>
+
+    </androidx.core.widget.NestedScrollView>
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/Btn_crear_anuncio"
+        android:text="@string/Btn_crear_anuncio"
+        android:layout_alignParentBottom="true"
+        android:textAllCaps="true"
+        android:layout_margin="10dp"
+        app:cornerRadius="8dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+</RelativeLayout>

@@ -1,0 +1,355 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".DetalleAnuncio.DetalleAnuncio">
+
+    <!--Toolbar-->
+    <RelativeLayout
+        android:id="@+id/ToolbarRL"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/mi_toolbar_height">
+        
+        <ImageButton
+            android:id="@+id/Ib_regresar"
+            android:src="@drawable/ic_regresar"
+            android:background="@android:color/transparent"
+            android:layout_centerVertical="true"
+            android:padding="10dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+        <TextView
+            android:layout_centerInParent="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+        <!--Editar-->
+        <ImageButton
+            android:id="@+id/Ib_editar"
+            android:src="@drawable/ic_editar"
+            android:background="@android:color/transparent"
+            android:layout_toStartOf="@+id/Ib_eliminar"
+            android:layout_centerVertical="true"
+            android:padding="10dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+        <!--Eliminar-->
+        <ImageButton
+            android:id="@+id/Ib_eliminar"
+            android:src="@drawable/ic_eliminar"
+            android:background="@android:color/transparent"
+            android:layout_toStartOf="@+id/Iv_comentarios"
+            android:layout_centerVertical="true"
+            android:padding="10dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+        <!--Comentarios-->
+        <ImageView
+            android:id="@+id/Iv_comentarios"
+            android:layout_toStartOf="@+id/Ib_favorito"
+            android:src="@drawable/ic_reviews"
+            android:background="@android:color/transparent"
+            android:layout_centerVertical="true"
+            android:padding="10dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+        <!--Fav - no Fav-->
+        <ImageButton
+            android:id="@+id/Ib_favorito"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_centerInParent="true"
+            android:background="@android:color/transparent"
+            android:padding="10dp"
+            android:src="@drawable/ic_no_favorito" />
+
+    </RelativeLayout>
+
+    <!--Informacion del anuncio-->
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/ToolbarRL">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="20dp">
+
+            <!--mostraremos las imageness del anuncio-->
+            <androidx.viewpager2.widget.ViewPager2
+                android:id="@+id/imagenSliderVP"
+                android:layout_width="match_parent"
+                android:layout_height="200dp"/>
+
+            <!--Valoracion-->
+            <RatingBar
+                android:id="@+id/ratingBar"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:numStars="5"
+                android:rating="0"
+                android:stepSize="0.1"
+                android:layout_below="@id/imagenSliderVP"
+                android:clickable="false"
+                android:padding="1dp"
+                android:layout_marginTop="10dp"
+                style="?android:attr/ratingBarStyleSmall"/>
+
+            <!--Fecha de publicacion-->
+            <TextView
+                android:id="@+id/Tv_fecha"
+                android:text="@string/Tv_fecha"
+                android:layout_below="@id/imagenSliderVP"
+                android:layout_alignParentEnd="true"
+                android:layout_marginTop="10dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+
+            <!--Txt y Vistas-->
+            <RelativeLayout
+                android:id="@+id/Rl_info"
+                android:layout_below="@+id/Tv_fecha"
+                android:layout_marginTop="13dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <!-- Txt -->
+                <TextView
+                    android:id="@+id/Txt_detalle_info"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/Txt_detalle_info"
+                    android:textSize="18sp"
+                    android:textStyle="bold"/>
+
+                <ImageView
+                    android:id="@+id/ic_anuncio_verificado"
+                    android:src="@drawable/ic_anuncio_verificado"
+                    android:layout_marginLeft="3dp"
+                    android:layout_toEndOf="@+id/Txt_detalle_info"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+
+                <!-- ImageView -->
+                <ImageView
+                    android:id="@+id/ic_vistas"
+                    android:src="@drawable/ic_vistas"
+                    android:layout_alignParentEnd="true"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+
+                <TextView
+                    android:id="@+id/Tv_vistas"
+                    android:text="@string/Tv_vistas"
+                    android:layout_toStartOf="@id/ic_vistas"
+                    android:layout_alignTop="@+id/Txt_detalle_info"
+                    android:layout_alignBottom="@+id/Txt_detalle_info"
+                    android:layout_marginTop="2dp"
+                    android:layout_marginRight="1dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"/>
+
+            </RelativeLayout>
+
+            <!--Txt-->
+            <TextView
+                android:id="@+id/Txt_nombre"
+                android:text="@string/Txt_nombre"
+                android:textStyle="bold"
+                android:textSize="18sp"
+                android:layout_marginTop="10dp"
+                android:layout_below="@id/Rl_info"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+
+            <!--Título-->
+            <TextView
+                android:id="@+id/Tv_nombre"
+                android:text="@string/Tv_titulo"
+                android:layout_below="@id/Txt_nombre"
+                android:layout_marginTop="5dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+
+            <!--Txt-->
+            <TextView
+                android:id="@+id/Txt_categoria"
+                android:text="@string/Categoria"
+                android:layout_below="@+id/Tv_nombre"
+                android:textStyle="bold"
+                android:textSize="18sp"
+                android:layout_marginTop="5dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+
+            <!--Categoría-->
+            <TextView
+                android:id="@+id/Tv_cat"
+                android:text="@string/Tv_cat"
+                android:layout_below="@id/Txt_categoria"
+                android:layout_marginTop="5dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+
+            <!--Txt-->
+            <TextView
+                android:id="@+id/Txt_calorias"
+                android:text="@string/Txt_calorias"
+                android:layout_below="@+id/Tv_cat"
+                android:textStyle="bold"
+                android:textSize="18sp"
+                android:layout_marginTop="5dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+
+            <!--Calorías-->
+            <TextView
+                android:id="@+id/Tv_calorias"
+                android:text="@string/Tv_calorias"
+                android:layout_below="@id/Txt_calorias"
+                android:layout_marginTop="5dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+
+            <!--Txt-->
+            <TextView
+                android:id="@+id/Txt_descripcion"
+                android:text="@string/Txt_descripcion"
+                android:textStyle="bold"
+                android:textSize="18sp"
+                android:layout_marginTop="5dp"
+                android:layout_below="@+id/Tv_calorias"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+
+            <!--Descripcion-->
+            <TextView
+                android:id="@+id/Tv_descr"
+                android:text="@string/Tv_descr"
+                android:layout_below="@id/Txt_descripcion"
+                android:layout_marginTop="5dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+
+            <!--Txt-->
+            <TextView
+                android:id="@+id/Txt_ingredientes"
+                android:text="@string/Txt_ingredientes"
+                android:textStyle="bold"
+                android:textSize="18sp"
+                android:layout_marginTop="5dp"
+                android:layout_below="@+id/Tv_descr"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+
+            <!--Ingredientes-->
+            <TextView
+                android:id="@+id/Tv_ingredientes"
+                android:text="@string/Tv_ingredientes"
+                android:layout_below="@id/Txt_ingredientes"
+                android:layout_marginTop="5dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+
+            <!--Txt-->
+            <TextView
+                android:id="@+id/Txt_pasos"
+                android:text="@string/Txt_pasos"
+                android:textStyle="bold"
+                android:textSize="18sp"
+                android:layout_marginTop="5dp"
+                android:layout_below="@+id/Tv_ingredientes"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+
+            <!--Pasos-->
+            <TextView
+                android:id="@+id/Tv_pasos"
+                android:text="@string/Tv_pasos"
+                android:layout_below="@id/Txt_pasos"
+                android:layout_marginTop="5dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+
+            <!--Txt-->
+            <TextView
+                android:id="@+id/Txt_descipcion_del_vendedor"
+                android:text="@string/Txt_descipcion_del_vendedor"
+                android:layout_below="@id/Tv_pasos"
+                android:textStyle="bold"
+                android:textSize="18sp"
+                android:layout_marginTop="5dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/perfilVendedor"
+                android:layout_below="@id/Txt_descipcion_del_vendedor"
+                android:backgroundTint="#F2F4F4"
+                app:cardCornerRadius="10dp"
+                app:cardUseCompatPadding="true"
+                app:contentPadding="10dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <!--Imagen de perfil del vendedor-->
+                    <com.google.android.material.imageview.ShapeableImageView
+                        android:id="@+id/ImgPerfil"
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:src="@drawable/img_perfil"
+                        app:shapeAppearance="@style/ImageStyle_Circle"/>
+
+                    <!--Nombres del vendedor-->
+                    <TextView
+                        android:id="@+id/Tv_nombres"
+                        android:text="@string/Tv_nombres"
+                        android:textStyle="bold|italic"
+                        android:layout_marginStart="7dp"
+                        android:layout_toEndOf="@+id/ImgPerfil"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"/>
+
+                    <!--Txt-->
+                    <TextView
+                        android:id="@+id/Txt_miembro"
+                        android:text="@string/Txt_miembro"
+                        android:layout_toEndOf="@id/ImgPerfil"
+                        android:layout_below="@id/Tv_nombres"
+                        android:layout_marginStart="7dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"/>
+
+                    <!--Fecha de registro-->
+                    <TextView
+                        android:id="@id/Tv_miembro"
+                        android:text="@string/Tv_miembro"
+                        android:layout_toEndOf="@id/Txt_miembro"
+                        android:layout_below="@id/Tv_nombres"
+                        android:layout_marginStart="5dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"/>
+
+                </RelativeLayout>
+
+            </com.google.android.material.card.MaterialCardView>
+
+            
+        </RelativeLayout>
+        
+    </ScrollView>
+
+</RelativeLayout>
